@@ -16,7 +16,7 @@ Current status from API:
 
 Last API update:
 
-`2026-07-02T22:26:55.795Z`
+`2026-07-02T22:34:42.515Z`
 
 ## Public assets
 
@@ -31,7 +31,7 @@ Last API update:
 Public CI:
 
 - GitHub Actions CI: PASS
-- Latest green run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28625628013
+- Latest green run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28625835016
 
 Local validation run:
 
