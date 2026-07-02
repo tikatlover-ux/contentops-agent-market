@@ -31,7 +31,8 @@ Last API update:
 Public CI:
 
 - GitHub Actions CI: PASS
-- Latest green run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28625835016
+- Latest green run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28626304883
+- ContentOps seller agent CI job: PASS
 
 Local validation run:
 
