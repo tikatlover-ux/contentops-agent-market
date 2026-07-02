@@ -43,7 +43,7 @@ jobs:
       - name: Install pnpm
         run: npm install -g pnpm@11.7.0
       - name: Build shared runtime
-        run: cd packages/agent-runtime && pnpm install --ignore-scripts --no-frozen-lockfile && pnpm run build
+        run: cd packages/agent-runtime && npm install && npm run build
       - name: Install seller agent dependencies
         run: cd coral-agents/seller-agent && pnpm install --ignore-scripts --no-frozen-lockfile
       - name: Attach built runtime to local file dependency
