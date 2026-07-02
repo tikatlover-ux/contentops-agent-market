@@ -40,16 +40,14 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - name: Install pnpm
-        run: npm install -g pnpm@11.7.0
       - name: Build shared runtime
         run: cd packages/agent-runtime && npm install && npm run build
       - name: Install seller agent dependencies
-        run: cd coral-agents/seller-agent && pnpm install --ignore-scripts --no-frozen-lockfile
+        run: cd coral-agents/seller-agent && npm install --package-lock=false --ignore-scripts
       - name: Attach built runtime to local file dependency
         run: mkdir -p coral-agents/seller-agent/node_modules/@pay/agent-runtime && cp -R packages/agent-runtime/dist coral-agents/seller-agent/node_modules/@pay/agent-runtime/dist
       - name: seller-agent (typecheck + tests)
-        run: cd coral-agents/seller-agent && pnpm run typecheck && pnpm test
+        run: cd coral-agents/seller-agent && npm run typecheck && npm test
 
   escrow:
     name: Escrow + arbiter contracts (Rust compile check)
