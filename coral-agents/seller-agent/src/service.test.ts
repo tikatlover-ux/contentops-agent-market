@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { deliverService } from './service.js'
 
-describe('deliverService txline-only routing', () => {
+describe('deliverService routing', () => {
   const realFetch = global.fetch
 
   beforeEach(() => {
@@ -19,7 +19,23 @@ describe('deliverService txline-only routing', () => {
 
   it('rejects legacy generic services', async () => {
     const out = JSON.parse(await deliverService('coingecko eth'))
-    expect(out).toEqual({ error: 'unsupported service', service: 'coingecko', supported: ['txline'] })
+    expect(out).toEqual({ error: 'unsupported service', service: 'coingecko', supported: ['contentops', 'txline'] })
+  })
+
+  it('returns a bounded ContentOps kit without external calls', async () => {
+    global.fetch = vi.fn(async () => { throw new Error('contentops should not fetch') }) as unknown as typeof fetch
+
+    const out = JSON.parse(await deliverService('contentops bakery selling cakes by WhatsApp'))
+
+    expect(out).toMatchObject({
+      service: 'contentops-kit',
+      buyer: 'agent or human operator who needs conversion-ready micro-content',
+    })
+    expect(out.product).toContain('bakery selling cakes by WhatsApp')
+    expect(out.deliverable.whatsappReplies).toHaveLength(5)
+    expect(out.deliverable.contentCalendar.length).toBeGreaterThanOrEqual(5)
+    expect(out.deliverable.adaptationChecklist).toContain('Never promise guaranteed sales or unavailable inventory.')
+    expect(out.settlementProof).toContain('Solana devnet escrow')
   })
 
   it('returns fixtures from TxLINE', async () => {
