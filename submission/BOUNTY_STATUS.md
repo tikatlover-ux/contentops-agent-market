@@ -28,6 +28,11 @@ Last API update:
 
 ## Validation evidence
 
+Public CI:
+
+- GitHub Actions CI: PASS
+- Latest green run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28625628013
+
 Local validation run:
 
 - `pnpm run typecheck` in `coral-agents/seller-agent`: PASS
