@@ -40,12 +40,12 @@ jobs:
       - uses: actions/setup-node@v5
         with:
           node-version: 20
-      - name: Enable pnpm
-        run: corepack enable
+      - name: Install pnpm
+        run: npm install -g pnpm@11.7.0
       - name: Build shared runtime
-        run: cd packages/agent-runtime && pnpm install --ignore-scripts && pnpm run build
+        run: cd packages/agent-runtime && pnpm install --ignore-scripts --no-frozen-lockfile && pnpm run build
       - name: Install seller agent dependencies
-        run: cd coral-agents/seller-agent && pnpm install --ignore-scripts
+        run: cd coral-agents/seller-agent && pnpm install --ignore-scripts --no-frozen-lockfile
       - name: Attach built runtime to local file dependency
         run: mkdir -p coral-agents/seller-agent/node_modules/@pay/agent-runtime && cp -R packages/agent-runtime/dist coral-agents/seller-agent/node_modules/@pay/agent-runtime/dist
       - name: seller-agent (typecheck + tests)
