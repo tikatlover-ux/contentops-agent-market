@@ -10,6 +10,8 @@ Imperial AI Agent Hackathon: Build the Agent Economy
 - Pitch deck: ./contentops_agent_market_pitch_deck.pdf
 - Demo visual: ./contentops_agent_market_demo.gif
 - Demo transcript: ./demo_transcript_contentops_market.json
+- Reviewer guide: ./REVIEW_GUIDE.md
+- Bounty status: ./BOUNTY_STATUS.md
 
 ## What the fork changes
 
