@@ -44,8 +44,8 @@ jobs:
         run: cd packages/agent-runtime && npm install && npm run build
       - name: Install seller agent dependencies
         run: cd coral-agents/seller-agent && npm install --package-lock=false --ignore-scripts
-      - name: seller-agent (typecheck + tests)
-        run: cd coral-agents/seller-agent && npm run typecheck && npm test
+      - name: seller-agent (typecheck + tests + demo)
+        run: cd coral-agents/seller-agent && npm run typecheck && npm test && npm run demo:contentops
 
   escrow:
     name: Escrow + arbiter contracts (Rust compile check)

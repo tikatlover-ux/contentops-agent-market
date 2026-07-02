@@ -45,6 +45,7 @@ cd coral-agents/seller-agent
 npm install --package-lock=false --ignore-scripts
 npm run typecheck
 npm test
+npm run demo:contentops -- "bakery selling cakes by WhatsApp"
 ```
 
 Expected seller-agent test result:
@@ -59,6 +60,8 @@ The ContentOps behavior is covered in:
 ```text
 coral-agents/seller-agent/src/service.test.ts
 ```
+
+The reproducible demo command prints a JSON content kit with WhatsApp replies, a short content calendar, an adaptation checklist, and settlement notes.
 
 ## Safety and payout notes
 

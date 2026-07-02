@@ -5,6 +5,7 @@
   "engines": { "node": ">=20" },
   "scripts": {
     "build": "tsc",
+    "demo:contentops": "npm run build && node dist/demo-contentops.js",
     "start": "node dist/index.js",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
