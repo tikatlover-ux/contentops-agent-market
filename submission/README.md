@@ -14,6 +14,7 @@ Imperial AI Agent Hackathon: Build the Agent Economy
 - Bounty status: ./BOUNTY_STATUS.md
 - Evaluation matrix: ./EVALUATION_MATRIX.md
 - Payout verification: ./PAYOUT_VERIFICATION.md
+- Submission snapshot: ./SUBMISSION_SNAPSHOT.md
 
 ## What the fork changes
 
