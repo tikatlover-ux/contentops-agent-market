@@ -32,6 +32,25 @@ jobs:
       - name: txodds (typecheck + tests)
         run: cd examples/txodds && npm install && npm run typecheck && npm test
 
+  seller-contentops:
+    name: ContentOps seller agent (typecheck + tests)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 20
+      - name: Enable pnpm
+        run: corepack enable
+      - name: Build shared runtime
+        run: cd packages/agent-runtime && pnpm install --ignore-scripts && pnpm run build
+      - name: Install seller agent dependencies
+        run: cd coral-agents/seller-agent && pnpm install --ignore-scripts
+      - name: Attach built runtime to local file dependency
+        run: mkdir -p coral-agents/seller-agent/node_modules/@pay/agent-runtime && cp -R packages/agent-runtime/dist coral-agents/seller-agent/node_modules/@pay/agent-runtime/dist
+      - name: seller-agent (typecheck + tests)
+        run: cd coral-agents/seller-agent && pnpm run typecheck && pnpm test
+
   escrow:
     name: Escrow + arbiter contracts (Rust compile check)
     runs-on: ubuntu-latest
