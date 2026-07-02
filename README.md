@@ -8,6 +8,7 @@ Quick review links:
 
 - Reviewer guide: [submission/REVIEW_GUIDE.md](submission/REVIEW_GUIDE.md)
 - Evaluation matrix: [submission/EVALUATION_MATRIX.md](submission/EVALUATION_MATRIX.md)
+- Payout verification: [submission/PAYOUT_VERIFICATION.md](submission/PAYOUT_VERIFICATION.md)
 - Demo video: [submission/contentops_agent_market_demo.mp4](submission/contentops_agent_market_demo.mp4)
 - Pitch deck: [submission/contentops_agent_market_pitch_deck.pdf](submission/contentops_agent_market_pitch_deck.pdf)
 - Reproducible seller demo: `cd coral-agents/seller-agent && npm run demo:contentops -- "bakery selling cakes by WhatsApp"`
