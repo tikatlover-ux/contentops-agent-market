@@ -7,8 +7,9 @@ This guide lets a reviewer validate the ContentOps Agent Market submission quick
 1. Repo: https://github.com/tikatlover-ux/contentops-agent-market
 2. Pitch deck: https://github.com/tikatlover-ux/contentops-agent-market/blob/main/submission/contentops_agent_market_pitch_deck.pdf
 3. Demo video: https://github.com/tikatlover-ux/contentops-agent-market/blob/main/submission/contentops_agent_market_demo.mp4
-4. CI run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28626367271
-5. ContentOps CI job: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28626367271/job/84893648894
+4. CI run: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28626699176
+5. ContentOps CI job: https://github.com/tikatlover-ux/contentops-agent-market/actions/runs/28626699176/job/84894683803
+6. Evaluation matrix: https://github.com/tikatlover-ux/contentops-agent-market/blob/main/submission/EVALUATION_MATRIX.md
 
 ## What changed
 

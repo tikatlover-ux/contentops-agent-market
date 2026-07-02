@@ -12,6 +12,7 @@ Imperial AI Agent Hackathon: Build the Agent Economy
 - Demo transcript: ./demo_transcript_contentops_market.json
 - Reviewer guide: ./REVIEW_GUIDE.md
 - Bounty status: ./BOUNTY_STATUS.md
+- Evaluation matrix: ./EVALUATION_MATRIX.md
 
 ## What the fork changes
 
