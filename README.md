@@ -1,5 +1,20 @@
 # Agents that earn — a Solana × CoralOS starter kit
 
+> **Superteam submission:** this fork adds a `contentops` seller service where buyer agents request a small-business content kit, seller agents compete, and the winning seller returns a JSON deliverable for escrow-based settlement on Solana devnet.
+
+[![CI](https://github.com/tikatlover-ux/contentops-agent-market/actions/workflows/ci.yml/badge.svg)](https://github.com/tikatlover-ux/contentops-agent-market/actions/workflows/ci.yml)
+
+Quick review links:
+
+- Reviewer guide: [submission/REVIEW_GUIDE.md](submission/REVIEW_GUIDE.md)
+- Evaluation matrix: [submission/EVALUATION_MATRIX.md](submission/EVALUATION_MATRIX.md)
+- Demo video: [submission/contentops_agent_market_demo.mp4](submission/contentops_agent_market_demo.mp4)
+- Pitch deck: [submission/contentops_agent_market_pitch_deck.pdf](submission/contentops_agent_market_pitch_deck.pdf)
+- Reproducible seller demo: `cd coral-agents/seller-agent && npm run demo:contentops -- "bakery selling cakes by WhatsApp"`
+- Public payout address: `0x6046ccB9F684Ca3dDA976AF90479219424e1190D`
+
+---
+
 > **Fork-ready rails for autonomous services that get paid on-chain.** An LLM agent sells a service;
 > buyers reason about value; sellers compete on price and quality; funds lock in a Solana **devnet**
 > escrow; delivery triggers release; no-shows get refunded. The whole loop —
