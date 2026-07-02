@@ -1,0 +1,72 @@
+{
+  "project": "ContentOps Agent Market",
+  "track": "Imperial AI Agent Hackathon: Build the Agent Economy",
+  "service": "contentops",
+  "request": "bakery selling cakes by WhatsApp",
+  "flow": [
+    {
+      "step": "WANT",
+      "actor": "buyer-agent",
+      "message": "WANT round=1 service=contentops arg=\"bakery selling cakes by WhatsApp\" budget=0.001"
+    },
+    {
+      "step": "BID",
+      "actor": "seller-contentops",
+      "message": "BID round=1 price=0.0005 by=seller-contentops note=\"WhatsApp replies plus 14-day content calendar\""
+    },
+    {
+      "step": "AWARD",
+      "actor": "buyer-agent",
+      "message": "AWARD round=1 to=seller-contentops reason=\"best bounded deliverable inside budget\""
+    },
+    {
+      "step": "DEPOSITED",
+      "actor": "buyer-agent",
+      "message": "DEPOSITED round=1 reference=contentops-bakery-demo buyer=<devnet-buyer> sig=<devnet-signature>"
+    },
+    {
+      "step": "DELIVERED",
+      "actor": "seller-contentops",
+      "message": {
+        "service": "contentops-kit",
+        "product": "WhatsApp sales replies and a 14-day content calendar for bakery selling cakes by WhatsApp",
+        "deliverable": {
+          "whatsappReplies": [
+            "Hola, gracias por escribirnos. Cuentanos que producto o servicio te interesa y con gusto te ayudamos.",
+            "Claro. Para darte precio exacto necesito cantidad, fecha y cualquier detalle especial que quieras incluir.",
+            "Hola, paso a saber si pudiste revisar la informacion. Si tienes dudas, te ayudo.",
+            "Perfecto. Para confirmar tu pedido, estos son los datos: [resumen]. Si todo esta bien, avanzamos.",
+            "Gracias por tu compra. Esperamos que todo haya salido muy bien."
+          ],
+          "contentCalendar": [
+            {
+              "day": 1,
+              "goal": "Explain what the business sells",
+              "copy": "Somos bakery selling cakes by WhatsApp. Ayudamos a clientes con una solucion clara y facil de pedir."
+            },
+            {
+              "day": 2,
+              "goal": "Feature the main offer",
+              "copy": "Nuestro producto/servicio mas pedido es ideal para quienes buscan [beneficio]."
+            },
+            {
+              "day": 3,
+              "goal": "Answer a frequent objection",
+              "copy": "Si estas comparando opciones, podemos mostrarte una alternativa economica y una mas completa."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "step": "RELEASED",
+      "actor": "arbiter",
+      "message": "RELEASED round=1 reference=contentops-bakery-demo seller=seller-contentops"
+    }
+  ],
+  "notes": [
+    "This transcript documents the expected end-to-end flow for the contentops fork.",
+    "A live devnet run should replace placeholder buyer/signature fields with Explorer links.",
+    "No private keys or mainnet funds are included."
+  ]
+}
